@@ -1,0 +1,23 @@
+class MovieTicketSystem:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def check_eligibility(self):
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+
+        if self.age >= 18:
+            print("✅ Eligible for movie ticket entry.")
+        else:
+            print("❌ Not eligible. Entry allowed only for age 18 and above.")
+
+
+# Example usage
+user1 = MovieTicketSystem("Rahul", 20)
+user1.check_eligibility()
+
+print("\n")
+
+user2 = MovieTicketSystem("Amit", 16)
+user2.check_eligibility()
