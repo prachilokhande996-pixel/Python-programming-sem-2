@@ -1,0 +1,25 @@
+class TrafficPoliceSystem:
+    def __init__(self, driver_name, speed):
+        self.driver_name = driver_name
+        self.speed = speed  # in km/h
+
+    def check_speed(self):
+        print(f"Driver Name: {self.driver_name}")
+        print(f"Speed: {self.speed} km/h")
+
+        if self.speed > 60:
+            fine = (self.speed - 60) * 10  # simple fine calculation
+            print("⚠️ Overspeeding Detected!")
+            print(f"Fine to be paid: ₹{fine}")
+        else:
+            print("✅ Speed is within limit. Safe driving!")
+
+
+# Example usage
+driver1 = TrafficPoliceSystem("Rahul", 75)
+driver1.check_speed()
+
+print("\n")
+
+driver2 = TrafficPoliceSystem("Amit", 55)
+driver2.check_speed()
