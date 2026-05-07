@@ -1,0 +1,16 @@
+class ReceiptPrinter:
+    def __init__(self, items, copies):
+        self.items = items      # number of items
+        self.copies = copies    # number of receipt copies
+
+    def print_receipts(self):
+        for copy in range(1, self.copies + 1):
+            print(f"\n--- Receipt Copy {copy} ---")
+            
+            for item in range(1, self.items + 1):
+                print(f"Item No: {item}")
+
+
+# Example usage
+shop = ReceiptPrinter(items=5, copies=3)
+shop.print_receipts()
