@@ -1,0 +1,23 @@
+class LoanApprovalSystem:
+    def __init__(self, applicant_name, salary):
+        self.applicant_name = applicant_name
+        self.salary = salary
+
+    def check_approval(self):
+        print(f"Applicant Name: {self.applicant_name}")
+        print(f"Salary: ₹{self.salary}")
+
+        if self.salary >= 25000:
+            print("✅ Loan Status: APPROVED")
+        else:
+            print("❌ Loan Status: REJECTED")
+
+
+# Example usage
+applicant1 = LoanApprovalSystem("Rahul", 30000)
+applicant1.check_approval()
+
+print("\n")
+
+applicant2 = LoanApprovalSystem("Amit", 18000)
+applicant2.check_approval()
